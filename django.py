@@ -23,10 +23,10 @@ get_req() {
 restarts() {
     echo "Restarting Docker and Nginx services..."
     sudo chown $USER /var/run/docker.sock
-    sudo systemctl enable docker
-    sudo systemctl enable nginx
     sudo systemctl restart docker
     sudo systemctl restart nginx
+    sudo systemctl enable docker
+    sudo systemctl enable nginx
 }
 
 # Deploy the Django app
@@ -54,5 +54,6 @@ if ! deploy; then
     echo " Deployment failed!"
     exit 1
 fi
+
 
 echo "Django App successfully deployed!"
