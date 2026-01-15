@@ -57,3 +57,4 @@ fi
 
 
 echo "Django App successfully deployed!"
+
