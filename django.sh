@@ -37,7 +37,6 @@ deploy() {
     docker run -d -p 8000:8000 notes-app
 }
 
-### --- MAIN EXECUTION BLOCK ---
 
 git_clone
 if ! get_req; then
@@ -57,4 +56,5 @@ fi
 
 
 echo "Django App successfully deployed!"
+
 
